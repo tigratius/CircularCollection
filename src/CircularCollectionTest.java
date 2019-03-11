@@ -21,6 +21,12 @@ public class CircularCollectionTest {
     }
 
     @org.junit.Test
+    public void checkUserConstr() {
+        circularCollection = new CircularCollection<>(5);
+        assertEquals(5, circularCollection.getCapacity());
+    }
+
+    @org.junit.Test
     public void checkCircular() {
         circularCollection = new CircularCollection<>(3);
         circularCollection.add("A");
